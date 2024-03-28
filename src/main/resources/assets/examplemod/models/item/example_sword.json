@@ -1,0 +1,26 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "examplemod:item/example_sword"
+    },
+    "display": {
+        "thirdperson_lefthand": {
+            "rotation": [0, 90, -25],
+            "scale": [20, 20, 1],
+            "translation": [10, 0, 0]
+        },
+        "thirdperson_righthand": {
+            "rotation": [0, 90, -25],
+            "scale": [20, 20, 1],
+            "translation": [0, 10, 0]
+        },
+        "firstperson_lefthand": {
+            "rotation": [0, 90, -25],
+            "scale": [0.68, 0.68, 0.68]
+        },
+        "ground": {
+            "rotation": [90, 0, 0],
+            "scale": [10, 10, 1]
+        }
+    }
+}

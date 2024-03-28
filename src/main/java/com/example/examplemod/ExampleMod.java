@@ -7,6 +7,9 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -27,7 +30,41 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
 import org.slf4j.Logger;
+
+class OverPoweredTier implements Tier {
+
+	@Override
+	public int getUses() {
+        return 0;
+	}
+
+	@Override
+	public float getSpeed() {
+        return 1;
+	}
+
+	@Override
+	public float getAttackDamageBonus() {
+        return 400f;
+	}
+
+	@Override
+	public int getLevel() {
+        return 100;
+	}
+
+	@Override
+	public int getEnchantmentValue() {
+        return 0;
+	}
+
+	@Override
+	public Ingredient getRepairIngredient() {
+        return Ingredient.EMPTY;
+	}
+}
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ExampleMod.MODID)
@@ -53,12 +90,23 @@ public class ExampleMod
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEat().nutrition(1).saturationMod(2f).build())));
 
+    public static final RegistryObject<Item> MEGA_SWORD = ITEMS.register("example_sword", ExampleMod::getSwordItem);
+    private static SwordItem getSwordItem() {
+        return new SwordItem( 
+            new OverPoweredTier(),
+            4,
+            4.1f,
+            new Item.Properties().food(new FoodProperties.Builder().build()).stacksTo(64)
+        );
+    }
+
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> MEGA_SWORD.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(MEGA_SWORD.get());
             }).build());
 
     public ExampleMod()
