@@ -1,26 +1,21 @@
 {
-    "parent": "item/generated",
+    "parent": "item/handheld",
     "textures": {
         "layer0": "examplemod:item/example_sword"
     },
     "display": {
         "thirdperson_lefthand": {
-            "rotation": [0, 90, -25],
+            "rotation": [-80, 90, 40],
             "scale": [20, 20, 1],
-            "translation": [10, 0, 0]
+            "translation": [0, 20, 0]
         },
         "thirdperson_righthand": {
-            "rotation": [0, 90, -25],
+            "rotation": [-80, -90, -40],
             "scale": [20, 20, 1],
-            "translation": [0, 10, 0]
-        },
-        "firstperson_lefthand": {
-            "rotation": [0, 90, -25],
-            "scale": [0.68, 0.68, 0.68]
+            "translation": [0, 20, 0]
         },
         "ground": {
-            "rotation": [90, 0, 0],
-            "scale": [10, 10, 1]
+            "rotation": [90, 0, 0]
         }
     }
 }
