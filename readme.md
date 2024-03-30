@@ -2,7 +2,7 @@
 
 Bee suits...
 
-## Auto Generated From Gradle:
+## Auto Generated From Forge:
 
 > Source installation information for modders
 > -------------------------------------------
