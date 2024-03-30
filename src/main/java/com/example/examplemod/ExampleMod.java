@@ -43,17 +43,17 @@ class OverPoweredTier implements Tier {
 
 	@Override
 	public float getSpeed() {
-        return 1;
+        return Float.MAX_VALUE;
 	}
 
 	@Override
 	public float getAttackDamageBonus() {
-        return 400f;
+        return Float.MAX_VALUE;
 	}
 
 	@Override
 	public int getLevel() {
-        return 100;
+        return Integer.MAX_VALUE;
 	}
 
 	@Override
