@@ -41,7 +41,7 @@ public class SteakPickaxe {
 
         @Override
         public float getAttackDamageBonus() {
-            return -0.9f;
+            return -0.5f; // this has a base of 1 for some reason
         }
 
         @Override
