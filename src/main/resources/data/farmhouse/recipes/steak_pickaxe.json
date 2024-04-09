@@ -2,15 +2,15 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-        "C",
-        "S"
+        "X",
+        "#"
     ],
     "key": {
-        "C": {
-            "type": "minecraft:cooked_beef"
+        "X": {
+            "item": "minecraft:cooked_beef"
         },
-        "S": {
-            "type": "minecraft:stick"
+        "#": {
+            "item": "minecraft:stick"
         }
     },
     "result": {
