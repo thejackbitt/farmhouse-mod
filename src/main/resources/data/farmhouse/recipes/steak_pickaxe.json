@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "X",
+        "#"
+    ],
+    "key": {
+        "X": {
+            "item": "minecraft:cooked_beef"
+        },
+        "#": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "farmhouse:steak_pickaxe",
+        "count": 1
+    }
+}
