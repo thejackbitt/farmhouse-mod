@@ -1,5 +1,6 @@
 package com.thejackbitt.farmhouse.tabs;
 
+import com.thejackbitt.farmhouse.blocks.ModBlocks;
 import com.thejackbitt.farmhouse.items.ModItems;
 
 import net.minecraft.network.chat.Component;
@@ -19,9 +20,14 @@ public class MainTab {
     }
 
     public static final void getItems(ItemDisplayParameters parameters, Output output) {
+        // items -----------------------------------
         output.accept(ModItems.STEAK_PICKAXE.get());
+        output.accept(ModItems.FRYING_PAN.get());
 
-        // add other items here
+        // blocks ----------------------------------
+        // output.accept(ModBlocks.STOVEN.get());
+
+        // add other items here ^
     }
 }
 
