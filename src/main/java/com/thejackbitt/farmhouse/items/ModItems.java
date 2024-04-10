@@ -10,7 +10,8 @@ import net.minecraft.world.item.Item;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, FarmhouseMod.MOD_ID);
 
-    public static final RegistryObject<Item> STEAK_PICKAXE =
-        ModItems.ITEMS.register(SteakPickaxe.ID, SteakPickaxe::build);
+    public static final RegistryObject<Item> STEAK_PICKAXE = ModItems.ITEMS.register(SteakPickaxe.ID, SteakPickaxe::build);
+
+    public static final RegistryObject<Item> FRYING_PAN = ModItems.ITEMS.register(FryingPan.ID, FryingPan::build);
 }
 
